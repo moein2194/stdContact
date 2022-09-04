@@ -5,7 +5,8 @@
    <application
         android:label="contact_app"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -32,5 +33,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+            
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>    
     </application>
 </manifest>
