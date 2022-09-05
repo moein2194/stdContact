@@ -1,8 +1,10 @@
+import 'package:contact_app/core/config/app_globals.dart';
 import 'package:contact_app/core/config/app_routes.dart';
 import 'package:contact_app/core/config/strings.dart';
+import 'package:contact_app/core/models/user/user_model.dart';
 import 'package:contact_app/core/storage/local_storage.dart';
 import 'package:contact_app/features/contact/views/contact_list_page.dart';
-import 'package:contact_app/features/login/pages/login_page.dart';
+import 'package:contact_app/features/login/views/login_page.dart';
 import 'package:contact_app/features/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,6 +32,7 @@ class MyApp extends StatelessWidget {
             return const SplashScreenPage();
           }
           if (snapshot.hasData) {
+            AppGlobals.userModel = UserModel.fromJson(snapshot.data!);
             return const ContactListPage();
           } else {
             return const LoginPage();

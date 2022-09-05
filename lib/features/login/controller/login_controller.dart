@@ -27,4 +27,5 @@ class LoginController extends MainController {
     Get.offAndToNamed(AppRoutes.contactListPage);
 
   }
+
 }

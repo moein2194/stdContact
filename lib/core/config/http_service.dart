@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:contact_app/core/config/app_globals.dart';
@@ -98,6 +97,35 @@ class HttpService {
 
     if (response.statusCode! ~/ 100 == 2) {
       return Future.value(response.data);
+    } else {
+      if (response.data.statusCode! ~/ 100 == 4) {
+        throw BadRequestException(response.data);
+      } else {
+        throw ServerException(response.data);
+      }
+    }
+  }
+
+  static Future<bool> delete(String path) async{
+        final options = Options();
+
+    options.headers = {
+      "x-apikey": AppGlobals.apiKey,
+      HttpHeaders.acceptHeader: 'application/json',
+    };
+    Response response;
+
+        try {
+      response = await Dio().delete(
+        path,
+        options: options,
+      );
+    } on DioError catch (_) {
+      throw false;
+    }
+
+    if (response.statusCode! ~/ 100 == 2) {
+      return true;
     } else {
       if (response.data.statusCode! ~/ 100 == 4) {
         throw BadRequestException(response.data);

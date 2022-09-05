@@ -4,6 +4,7 @@ class AppStrings {
   static const enterYourEmail = "Please enter your email";
   static const enterPhoneNumber = "Please enter correct phone number";
   static const confirm = "Confirm";
+  static const cancel = "Cancel";
   static const firstName = "First name";
   static const lastName = "Last name";
   static const phone = "Phone number";
@@ -22,4 +23,11 @@ class AppStrings {
   static const searchHint = "Search by name or number";
   static const contactsIsEmpty = "you haven't any contact";
   static const error = "Error";
+  static const logout = "Logout";
+  static const edit = "Edit";
+  static const remove = "Remove";
+  static const textCopyClipBoard = "Text copy to clipboard";
+  static const message = "Message";
+  static const areYouSure = "Are you sure?";
+  static const pleaseWait = "Please wait...";
 }

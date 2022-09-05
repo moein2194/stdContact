@@ -12,6 +12,8 @@ class ContactTextField extends StatelessWidget {
   final String? labelText;
   final void Function(String)? onFieldSubmitted;
   final bool enabled;
+  final int maxLines;
+  final void Function(String)? onChanged;
   const ContactTextField({
     this.key,
     this.controller,
@@ -23,6 +25,8 @@ class ContactTextField extends StatelessWidget {
     this.labelText,
     this.onFieldSubmitted,
     this.enabled = true,
+    this.maxLines = 1,
+    this.onChanged,
     this.margin = const EdgeInsets.all(8.0),
   }) : super(key: key);
 
@@ -62,11 +66,12 @@ class ContactTextField extends StatelessWidget {
             scrollPadding:
                 const EdgeInsets.symmetric(horizontal: 16.0),
             controller: controller,
-            
+            maxLines: maxLines,
             validator: validator,
             textAlign: TextAlign.start,
             keyboardType: keyboardType,
             onFieldSubmitted: onFieldSubmitted,
+            onChanged: onChanged,
             decoration: InputDecoration(
               border: InputBorder.none,
               enabled: enabled,

@@ -2,7 +2,7 @@
 import 'package:contact_app/features/contact/views/add_contact_page.dart';
 import 'package:contact_app/features/contact/views/contact_list_page.dart';
 import 'package:contact_app/features/contact/views/single_contact_page.dart';
-import 'package:contact_app/features/login/pages/login_page.dart';
+import 'package:contact_app/features/login/views/login_page.dart';
 import 'package:contact_app/features/splash_screen.dart';
 import 'package:get/get.dart';
 

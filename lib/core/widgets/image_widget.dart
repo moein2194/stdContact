@@ -2,10 +2,8 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:contact_app/core/config/images.dart';
-import 'package:contact_app/core/config/strings.dart';
 import 'package:contact_app/core/widgets/image_error_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ImageWidget extends StatelessWidget {
   final dynamic image;
